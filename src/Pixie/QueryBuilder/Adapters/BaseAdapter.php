@@ -40,9 +40,11 @@ abstract class BaseAdapter
 
         // From
         $tables = $this->arrayStr($statements['tables'], ', ');
+
+        // Prepare select's aliases
+
         // Select
         $selects = $this->arrayStr($statements['selects'], ', ');
-
 
         // Wheres
         list($whereCriteria, $whereBindings) = $this->buildCriteriaWithType($statements, 'wheres', 'WHERE');
